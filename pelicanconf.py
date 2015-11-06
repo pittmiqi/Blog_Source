@@ -6,6 +6,11 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
+AUTHOR = 'Qi Mi'
+SITENAME = 'Path of Learning - 書路'
+SITESUBTITLE = 'discrete, continuous, meta, force, motion'
+SITEURL = 'www.pathoflearning.com'
+
 
 TAG_URL = 'tag/{slug}'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
@@ -31,10 +36,6 @@ PREV_TITLE = "Prev"
 NEXT_TITLE = "Next"
 TAG_PAGE_TITLE = "Post tagged by"
 
-AUTHOR = 'Qi Mi'
-SITENAME = 'Path of Learning'
-SITESUBTITLE = 'discrete, continuous, limit , force'
-SITEURL = 'www.pathoflearning.com'
 
 PATH = 'content'
 
