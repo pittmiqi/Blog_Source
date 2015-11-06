@@ -29,6 +29,7 @@
     {% endblock head %}
     <meta name="keywords" content="{% block keywords %}{{ SITEKEYWORDS }}{% endblock keywords %}" />
     {% include "analytics.html" %}
+    
 </head>
 <body onload="set_years({{ BLOG_START_YEAR }})">
 {% include "github.html" %}
@@ -68,6 +69,27 @@
       </div>
     </footer>
     {% block scripts %}
+    <script type="text/javascript">
+// create the back to top button
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > amountScrolled) {
+    $('a.back-to-top').fadeIn('slow');
+  } else {
+    $('a.back-to-top').fadeOut('slow');
+  }
+});
+
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+  $('body').animate({
+    scrollTop: 0
+  }, 'fast');
+  return false;
+});
+</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="{{ SITEURL }}/theme/js/lightbox-2.6.min.js"></script>
     <script src="{{ SITEURL }}/theme/js/lazystrap.js"></script>

@@ -3,10 +3,15 @@
 {% block keywords %}{{super()}}{{ "," }}{{ article.tags|join(',') }}{% endblock keywords %}
 {% block head %}
   {{ super() }}
+    {% if EXTRA_HEADER %}
+      {{ EXTRA_HEADER }}
+    {% endif %}
   {% for description in article.description %}
     <meta name="description" contents="{{description}}" />
   {% endfor %}
+  {% include "back-to-top.html"%}
   {% endblock %}
+  }
 
 {% block content %}
           <div class="post-date pull-right">{{ article.date|strftime('%Y.%m.%d') }}</div>
