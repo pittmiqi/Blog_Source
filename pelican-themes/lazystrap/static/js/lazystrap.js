@@ -8,6 +8,8 @@ function set_years(startYear) {
   document.getElementById('years').innerHTML = startYear + "-" + y;
 }
 
-//$(document.links).filter(function() {
-//  return this.hostname != window.location.hostname;
-//}).attr('target', '_self');
+$(document.links).filter(function() {
+  return this.hostname != window.location.hostname;
+}).attr('target', '_blank');
+
+$("#protected").attr('target','_self')

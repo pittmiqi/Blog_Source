@@ -11,7 +11,7 @@
             {% include "searchform.html" %}
             {% for article in articles[:7] %}
             <div class="recent-post-header">
-              <h4><a target="_self" class="header-link" href="{{ SITEURL }}/{{ article.url }}">{{article.title}}<span class="link">&raquo;</span></a></h4>
+              <h4><a target="_self" id="protected" class="header-link" href="{{ SITEURL }}/{{ article.url }}">{{article.title}}<span class="link">&raquo;</span></a></h4>
               <div class="tags">
               {% for tag in article.tags[:3] %}
                 <a href="{{ SITEURL }}/{{ tag.url }}">@{{ tag }}</a>
